@@ -11,6 +11,29 @@
       crossorigin="anonymous"
     ></script>
     <script src="scripts.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+         
+            const greetingMessage = "Welcome to our Dreamstar Photography Website!";
+            alert(greetingMessage);
+
+           
+            const photos = document.querySelectorAll(".grid-image");
+            photos.forEach(photo => {
+                photo.addEventListener("mouseenter", function () {
+                   
+                    photo.style.transform = "rotate(10deg)";
+                });
+
+                photo.addEventListener("mouseleave", function () {
+                    
+                    photo.style.transform = "rotate(0deg)";
+                    
+                });
+            });
+        });
+    </script>
+    
 </head>
 <body>
    
@@ -130,7 +153,11 @@
         <i class="fa fa-youtube" aria-hidden="true"></i>
     </div>
     
+       
+        
+    
     
 </footer>
 </body>
 </html>
+
